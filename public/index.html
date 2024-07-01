@@ -3,9 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Teste</title>
+    <title>Meu Mural</title>
+    <link rel="stylesheet" href="./styles/global.css" />
   </head>
   <body>
-    Hello
+    <div class="container">
+      <h1>NEW POST</h1>
+      <div>
+        <input id="title" placeholder="Título" type="text" />
+        <input id="desc" placeholder="Descrição" type="text" />
+        <button onclick="newPost()">Save</button>
+      </div>
+      <h2>MURAL</h2>
+      <div id="posts"></div>
+    </div>
+    <script src="scripts/script.js"></script>
   </body>
 </html>
