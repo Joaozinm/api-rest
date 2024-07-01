@@ -26,6 +26,9 @@ h5 {
   margin-bottom: 14px;
 }
 .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 10px;
   border-radius: 4px 4px 0 0;
   background: rgb(240, 244, 252);
@@ -42,4 +45,18 @@ h5 {
 .card-title {
   font-size: 18px;
   padding: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.exBtn {
+  background-color: #f8d7da;
+  border: none;
+  color: #721c24;
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  display: inline-block;
 }

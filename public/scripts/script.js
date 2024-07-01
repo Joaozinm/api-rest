@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function updatePosts() {
-  fetch("http://localhost:3000/api/all")
+  fetch("http://192.168.0.4:3000/api/all")
     .then((res) => {
       return res.json();
     })
@@ -28,4 +28,22 @@ function updatePosts() {
     });
 }
 
-function newPost() {}
+function newPost() {
+  let title = document.getElementById("title").value;
+  let description = document.getElementById("desc").value;
+
+  let post = { title, description };
+
+  const options = {
+    method: "POST",
+    headers: new Headers({ "content-type": "application/json" }),
+    body: JSON.stringify(post),
+  };
+
+  fetch("http://192.168.0.4:3000/api/new", options).then((res) => {
+    document.getElementById("title").value = "";
+    document.getElementById("desc").value = "";
+    console.log(res);
+    updatePosts();
+  });
+}

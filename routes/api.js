@@ -1,7 +1,13 @@
 import express from "express";
 import posts from "../model/posts.js";
+import cors from "cors";
 
+const options = {
+  origin: "http://localhost:3000",
+};
 const router = express.Router();
+
+router.use(cors(options));
 
 router.get("/all", (req, res) => {
   res.json(posts.getAll());
